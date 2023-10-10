@@ -44,7 +44,7 @@ public class OWIThreePartSensation : UdonSharpBehaviour
     // String Parts
     private readonly string start = "VRC_OWO_WorldIntegration:[{";
     private string sensationNameStart = "\"sensation\": \"";
-    private readonly string sepperator = "}},{";
+    private readonly string separator = "}},{";
     private readonly string end = "}}]";
     [Header("First Zone Triggered Event")]
     [Header("Sensation Building Settings")]
@@ -67,7 +67,7 @@ public class OWIThreePartSensation : UdonSharpBehaviour
     [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampDown = 0f;
-    [SerializeField, Tooltip("Exit delay for the Second Sensation event.")]
+    [SerializeField, Tooltip("Exit delay for the  Sensation event.")]
     [Range(0, 20)]
     private float exitDelay = 0f;
     [Header("Secondary Zone Triggered Event")]
@@ -76,19 +76,19 @@ public class OWIThreePartSensation : UdonSharpBehaviour
     [SerializeField, Tooltip("Frequency for the Sensation event.")]
     [Range(1, 100)]
     private int frequency2 = 50;
-    [SerializeField, Tooltip("Duration of the Second Sensation event.")]
+    [SerializeField, Tooltip("Duration of the  Sensation event.")]
     [Range(0.1f, 20)]
     private float duration2 = 0.5f;
-    [SerializeField, Tooltip("Intensity percentage for the Second Sensation event.")]
+    [SerializeField, Tooltip("Intensity percentage for the  Sensation event.")]
     [Range(1, 100)]
     private int intensityPercentage2 = 80;
-    [SerializeField, Tooltip("Second Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [SerializeField, Tooltip(" Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampUp2 = 0f;
-    [SerializeField, Tooltip("Second Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [SerializeField, Tooltip(" Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampDown2 = 0.3f;
-    [SerializeField, Tooltip("Second Exit delay for the Sensation event.")]
+    [SerializeField, Tooltip(" Exit delay for the Sensation event.")]
     [Range(0, 20)]
     private float exitDelay2 = 0f;
     [Header("Last Zone Triggered After Event")]
@@ -269,11 +269,11 @@ public class OWIThreePartSensation : UdonSharpBehaviour
     {
         if (sensationThree.Length > 0)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + sepperator + sensationNameStart + sensationThree + end;
+            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + separator + sensationNameStart + sensationThree + end;
         }
         if (sensationThree.Length <= 0)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + end;
+            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + end;
         }
         return "ERROR";
     }

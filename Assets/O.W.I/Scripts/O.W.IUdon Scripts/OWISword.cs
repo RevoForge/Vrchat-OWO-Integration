@@ -1,4 +1,5 @@
-﻿using UdonSharp;
+﻿using System.Collections.Generic;
+using UdonSharp;
 using UnityEngine;
 
 public class OWISword : UdonSharpBehaviour
@@ -27,13 +28,15 @@ public class OWISword : UdonSharpBehaviour
     private readonly string lumbarRm = "\"lumbar_R\":100";
     private readonly string abdominalLm = "\"abdominal_L\":100";
     private readonly string abdominalRm = "\"abdominal_R\":100";
-
+    
 
     // String Parts
-    private readonly string start = "VRC_OWO_WorldIntegration:[{";
-    private string sensationNameStart = "\"sensation\": \"";
-    private readonly string sepperator = "}},{";
+    private readonly string start = "VRC_OWO_WorldIntegration:[{ \"priority\":";
+    private readonly string sensationNameStart = "\"sensation\": \"";
+    private readonly string separator = "}},{";
     private readonly string end = "}}]";
+
+    // Sensation Settings
     [Header("First Zone Triggered Event")]
     [Header("Sensation Building Settings")]
     [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
@@ -55,49 +58,51 @@ public class OWISword : UdonSharpBehaviour
     [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampDown = 0f;
-    [SerializeField, Tooltip("Exit delay for the Second Sensation event.")]
+    [SerializeField, Tooltip("Exit delay for the  Sensation event.")]
     [Range(0, 20)]
     private float exitDelay = 0f;
+
     [Header("Secondary Zone Triggered Event")]
     [SerializeField, Tooltip("Name for the Sensation event.")]
     private string sensationName2 = "Sword Stab Through";
     [SerializeField, Tooltip("Frequency for the Sensation event.")]
     [Range(1, 100)]
     private int frequency2 = 50;
-    [SerializeField, Tooltip("Duration of the Second Sensation event.")]
+    [SerializeField, Tooltip("Duration of the  Sensation event.")]
     [Range(0.1f, 20)]
     private float duration2 = 0.3f;
-    [SerializeField, Tooltip("Intensity percentage for the Second Sensation event.")]
+    [SerializeField, Tooltip("Intensity percentage for the  Sensation event.")]
     [Range(1, 100)]
     private int intensityPercentage2 = 80;
-    [SerializeField, Tooltip("Second Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [SerializeField, Tooltip("Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampUp2 = 0f;
-    [SerializeField, Tooltip("Second Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampDown2 = 0f;
-    [SerializeField, Tooltip("Second Exit delay for the Sensation event.")]
+    [SerializeField, Tooltip("Exit delay for the Sensation event.")]
     [Range(0, 20)]
     private float exitDelay2 = 0f;
+
     [Header("Muscle Group After Event")]
     [SerializeField, Tooltip("Name for the Sensation event.")]
     private string sensationName3 = "Sword Bleeding";
     [SerializeField, Tooltip("Frequency for the Sensation event.")]
     [Range(1, 100)]
     private int frequency3 = 100;
-    [SerializeField, Tooltip("Duration of the Second Sensation event.")]
+    [SerializeField, Tooltip("Duration of the  Sensation event.")]
     [Range(0.1f, 20)]
     private float duration3 = 5f;
-    [SerializeField, Tooltip("Intensity percentage for the Second Sensation event.")]
+    [SerializeField, Tooltip("Intensity percentage for the  Sensation event.")]
     [Range(1, 100)]
     private int intensityPercentage3 = 50;
-    [SerializeField, Tooltip("Second Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [SerializeField, Tooltip("Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampUp3 = 0f;
-    [SerializeField, Tooltip("Second Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampDown3 = 1.4f;
-    [SerializeField, Tooltip("Second Exit delay for the Sensation event.")]
+    [SerializeField, Tooltip("Exit delay for the Sensation event.")]
     [Range(0, 20)]
     private float exitDelay3 = 0f;
 
@@ -240,17 +245,17 @@ public class OWISword : UdonSharpBehaviour
                 + "\"rampup\":" + rampUp + ","
                 + "\"rampdown\":" + rampDown + ","
                 + "\"exitdelay\":" + exitDelayVal + ","
-                + "\"Muscles\": {" + muscles.TrimEnd(',');
+                + "\"Muscles\": {" + muscles;
     }
     private string BuildMultiSensationString(string sensationOne, string sensationTwo, string sensationThree)
     {
-        if (sensationThree.Length > 0)
+        if (triggerCount == 2)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + sepperator + sensationNameStart + sensationThree + end;
+            return start + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + separator + sensationNameStart + sensationThree + end;
         }
-        if (sensationThree.Length <= 0)
+        if (triggerCount == 1)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + end;
+            return start + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + end;
         }
         return "ERROR";
     }

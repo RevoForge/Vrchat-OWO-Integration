@@ -137,7 +137,7 @@ public class OWIMassageChairVariable : UdonSharpBehaviour
     // Logic Variables
     private string start;
     private readonly string sensationNameStart = "\"sensation\": \"";
-    private readonly string sepperator = "}},";
+    private readonly string separator = "}},";
     private readonly string end = "}}]";
     private bool[] massageStates = new bool[5];
     private Slider slider = null;
@@ -243,19 +243,19 @@ public class OWIMassageChairVariable : UdonSharpBehaviour
         }
         if (sensationTwo.Length > 0)
         {
-            if (alreadyAdded) result += sepperator;
+            if (alreadyAdded) result += separator;
             result += sensationNameStart + sensationTwo;
             alreadyAdded = true;
         }
         if (sensationThree.Length > 0)
         {
-            if (alreadyAdded) result += sepperator;
+            if (alreadyAdded) result += separator;
             result += sensationNameStart + sensationThree;
             alreadyAdded = true;
         }
         if (sensationFour.Length > 0)
         {
-            if (alreadyAdded) result += sepperator;
+            if (alreadyAdded) result += separator;
             result += sensationNameStart + sensationFour;
         }
         if (result == start) return "STRING ERROR SET AT LEAST ONE MUSCLE GROUP";

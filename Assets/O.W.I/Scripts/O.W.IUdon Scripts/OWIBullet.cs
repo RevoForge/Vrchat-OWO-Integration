@@ -35,7 +35,7 @@ public class OWIBullet : UdonSharpBehaviour
     // String Parts
     private readonly string start = "VRC_OWO_WorldIntegration:[{";
     private string sensationNameStart = "\"sensation\": \"";
-    private readonly string sepperator = "}},{";
+    private readonly string separator = "}},{";
     private readonly string end = "}}]";
     [Header("First Zone Triggered Event")]
     [Header("Sensation Building Settings")]
@@ -316,11 +316,11 @@ public class OWIBullet : UdonSharpBehaviour
     {
         if (sensationThree.Length > 0)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + sepperator + sensationNameStart + sensationThree + end;
+            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + separator + sensationNameStart + sensationThree + end;
         }
         if (sensationThree.Length <= 0)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + end;
+            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + end;
         }
         return "ERROR";
     }

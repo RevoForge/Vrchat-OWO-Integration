@@ -1,21 +1,20 @@
 ﻿
 using UdonSharp;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class OWIMicroSensationCreator : UdonSharpBehaviour
 {
     // Muscle Collider Names
-    private const string pectoralL = "owo_suit_Pectoral_L";
-    private const string pectoralR = "owo_suit_Pectoral_R";
-    private const string dorsalL = "owo_suit_Dorsal_L";
-    private const string dorsalR = "owo_suit_Dorsal_R";
-    private const string armL = "owo_suit_Arm_L";
-    private const string armR = "owo_suit_Arm_R";
-    private const string lumbarL = "owo_suit_Lumbar_L";
-    private const string lumbarR = "owo_suit_Lumbar_R";
-    private const string abdominalL = "owo_suit_Abdominal_L";
-    private const string abdominalR = "owo_suit_Abdominal_R";
+    private readonly string pectoralL = "owo_suit_Pectoral_L";
+    private readonly string pectoralR = "owo_suit_Pectoral_R";
+    private readonly string dorsalL = "owo_suit_Dorsal_L";
+    private readonly string dorsalR = "owo_suit_Dorsal_R";
+    private readonly string armL = "owo_suit_Arm_L";
+    private readonly string armR = "owo_suit_Arm_R";
+    private readonly string lumbarL = "owo_suit_Lumbar_L";
+    private readonly string lumbarR = "owo_suit_Lumbar_R";
+    private readonly string abdominalL = "owo_suit_Abdominal_L";
+    private readonly string abdominalR = "owo_suit_Abdominal_R";
     // Muscle String Names
     private readonly string pectoralLm = "\"pectoral_L\": 100";
     private readonly string pectoralRm = "\"pectoral_R\": 100";
@@ -38,7 +37,7 @@ public class OWIMicroSensationCreator : UdonSharpBehaviour
     [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
     private int sensationPriority = 1;
     [SerializeField, Tooltip("Name for the Sensation event.")]
-    private string sensationName = "One";
+    private string sensationName = "Default Name";
     [SerializeField, Tooltip("Frequency for the Sensation event.")]
     [Range(1, 100)]
     private int frequency = 100;
@@ -222,7 +221,7 @@ public class OWIMicroSensationCreator : UdonSharpBehaviour
             + "\"rampup\":" + rampUp + ","
             + "\"rampdown\":" + rampDown + ","
             + "\"exitdelay\":" + 0 + ","
-            + "\"Muscles\": {" + triggeredMuscles.TrimEnd(',')
+            + "\"Muscles\": {" + triggeredMuscles
             + end;
 
         Debug.Log(builtString);

@@ -47,7 +47,7 @@ public class OWIHandInteraction : UdonSharpBehaviour
     // String Parts
     private readonly string start = "VRC_OWO_WorldIntegration:[{";
     private readonly string sensationNameStart = "\"sensation\": \"";
-    private readonly string sepperator = "}},{";
+    private readonly string separator = "}},{";
     private readonly string end = "}}]";
     [Header("First Zone Triggered Event")]
     [Header("Sensation Building Settings")]
@@ -70,7 +70,7 @@ public class OWIHandInteraction : UdonSharpBehaviour
     [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
     [Range(0, 2)]
     private float rampDown = 0f;
-    [SerializeField, Tooltip("Exit delay for the Second Sensation event.")]
+    [SerializeField, Tooltip("Exit delay for the  Sensation event.")]
     [Range(0, 20)]
     private float exitDelay = 0f;
 
@@ -327,11 +327,11 @@ public class OWIHandInteraction : UdonSharpBehaviour
     {
         if (sensationThree.Length > 0)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + sepperator + sensationNameStart + sensationThree + end;
+            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + separator + sensationNameStart + sensationThree + end;
         }
         else if (sensationTwo.Length > 0)
         {
-            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + sepperator + sensationNameStart + sensationTwo + end;
+            return start + "\"priority\":" + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + end;
         }
         else if (sensationOne.Length > 0)
         {

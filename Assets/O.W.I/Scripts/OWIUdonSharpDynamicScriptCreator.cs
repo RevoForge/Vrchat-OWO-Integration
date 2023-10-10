@@ -157,7 +157,7 @@ public class OWIUdonSharpDynamicScriptCreator : MonoBehaviour
         }
         builder.AppendLine("private readonly string start = \"VRC_OWO_WorldIntegration:[\";");
         builder.AppendLine("private readonly string sensationNameStart = \"\\\"sensation\\\": \\\"\";");
-        builder.AppendLine("private readonly string sepperator = \"}},{\";");
+        builder.AppendLine("private readonly string separator = \"}},{\";");
         builder.AppendLine("private readonly string end = \"}}]\";");
         builder.AppendLine("private string[] triggerMusclesString = { \"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"};");
         builder.AppendLine("// Logic Variables");
@@ -359,7 +359,7 @@ public class OWIUdonSharpDynamicScriptCreator : MonoBehaviour
 
             for (int j = 2; j <= i; j++)
             {
-                codeBuilder.Append(" + sepperator + sensationNameStart + builtString" + j);
+                codeBuilder.Append(" + separator + sensationNameStart + builtString" + j);
             }
 
             codeBuilder.AppendLine(" + end;");

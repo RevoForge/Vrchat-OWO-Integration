@@ -1118,13 +1118,13 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: sepperator
+      Data: separator
     - Name: $v
       Entry: 7
       Data: 48|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: <Name>k__BackingField
       Entry: 1
-      Data: sepperator
+      Data: separator
     - Name: <UserType>k__BackingField
       Entry: 9
       Data: 3
@@ -1781,7 +1781,7 @@ MonoBehaviour:
       Data: 91|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Exit delay for the Second Sensation event.
+      Data: Exit delay for the  Sensation event.
     - Name: 
       Entry: 8
       Data: 
@@ -2004,7 +2004,7 @@ MonoBehaviour:
       Data: 106|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Duration of the Second Sensation event.
+      Data: Duration of the  Sensation event.
     - Name: 
       Entry: 8
       Data: 
@@ -2080,7 +2080,7 @@ MonoBehaviour:
       Data: 111|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Intensity percentage for the Second Sensation event.
+      Data: Intensity percentage for the  Sensation event.
     - Name: 
       Entry: 8
       Data: 
@@ -2156,8 +2156,7 @@ MonoBehaviour:
       Data: 116|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Second Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the
-        Vest.
+      Data: ' Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.'
     - Name: 
       Entry: 8
       Data: 
@@ -2233,8 +2232,7 @@ MonoBehaviour:
       Data: 121|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Second Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the
-        Vest.
+      Data: ' Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.'
     - Name: 
       Entry: 8
       Data: 
@@ -2310,7 +2308,7 @@ MonoBehaviour:
       Data: 126|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Second Exit delay for the Sensation event.
+      Data: ' Exit delay for the Sensation event.'
     - Name: 
       Entry: 8
       Data: 

@@ -1118,13 +1118,13 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: sepperator
+      Data: separator
     - Name: $v
       Entry: 7
       Data: 48|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
     - Name: <Name>k__BackingField
       Entry: 1
-      Data: sepperator
+      Data: separator
     - Name: <UserType>k__BackingField
       Entry: 9
       Data: 3
@@ -1781,7 +1781,7 @@ MonoBehaviour:
       Data: 91|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Exit delay for the Second Sensation event.
+      Data: Exit delay for the  Sensation event.
     - Name: 
       Entry: 8
       Data: 

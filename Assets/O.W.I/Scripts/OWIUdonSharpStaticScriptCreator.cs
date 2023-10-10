@@ -158,7 +158,7 @@ public class OWIUdonSharpStaticScriptCreator : MonoBehaviour
         }
         builder.AppendLine("private readonly string start = \"VRC_OWO_WorldIntegration:[\";");
         builder.AppendLine("private readonly string sensationNameStart = \"\\\"sensation\\\": \\\"\";");
-        builder.AppendLine("private readonly string sepperator = \"}},{\";");
+        builder.AppendLine("private readonly string separator = \"}},{\";");
         builder.AppendLine("private readonly string end = \"}}]\";");
         builder.AppendLine("private string[] triggerMusclesString = { \"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"};");
         builder.AppendLine("// Logic Variables");
@@ -330,7 +330,7 @@ public class OWIUdonSharpStaticScriptCreator : MonoBehaviour
             stringBuilder.AppendLine($"builtString{i} += playinorderString;");
             stringBuilder.AppendLine("if (i < triggeredMuscleInt)");
             stringBuilder.AppendLine("{");
-            stringBuilder.AppendLine($"builtString{i} += sepperator + sensationNameStart;");
+            stringBuilder.AppendLine($"builtString{i} += separator + sensationNameStart;");
             stringBuilder.AppendLine("}");
             stringBuilder.AppendLine("}");
             stringBuilder.AppendLine("break; ");
@@ -376,8 +376,8 @@ public class OWIUdonSharpStaticScriptCreator : MonoBehaviour
     {
         StringBuilder stringBuilder = new StringBuilder();
 
-       // stringBuilder.AppendLine("return start + \"{\\\"priority\\\":\" + sensationPriority + \",\" + sensationNameStart + builtString1 + sepperator + sensationNameStart + builtString2 + end;");
-        stringBuilder.AppendLine($"return start + \"{{\\\"priority\\\":\" + sensationPriority + \",\" + sensationNameStart + {string.Join(" + sepperator + sensationNameStart + ", Enumerable.Range(1, sensations.Count).Select(i => $"builtString{i}"))} + end;");
+       // stringBuilder.AppendLine("return start + \"{\\\"priority\\\":\" + sensationPriority + \",\" + sensationNameStart + builtString1 + separator + sensationNameStart + builtString2 + end;");
+        stringBuilder.AppendLine($"return start + \"{{\\\"priority\\\":\" + sensationPriority + \",\" + sensationNameStart + {string.Join(" + separator + sensationNameStart + ", Enumerable.Range(1, sensations.Count).Select(i => $"builtString{i}"))} + end;");
 
         return stringBuilder.ToString();
     }

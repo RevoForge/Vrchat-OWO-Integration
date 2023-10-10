@@ -133,7 +133,7 @@ public class OWIPaintBall : UdonSharpBehaviour
         ballBody.isKinematic = true;
         if (hittrigger)
         {
-            float backwardOffset = lagcorrection;  // Change this to your desired distance.
+            float backwardOffset = lagcorrection;  
             Vector3 adjustedPosition = transform.position - transform.forward * backwardOffset;
             transform.position = adjustedPosition;
         }

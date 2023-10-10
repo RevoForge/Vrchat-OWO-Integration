@@ -33,4 +33,13 @@ public class OWIUdonSharpStaticScriptCreatorEditor : Editor
         }
     }
 }
+[CustomEditor(typeof(OWIGlobalSensation))]
+public class OWIGlobalSensationsEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        EditorGUILayout.HelpBox("If Start Sensation On Load is not enabled to start the sensation you need to call the StartSensation() method and to stop it in either case you call the StopSensation() method", MessageType.Info);
+        base.OnInspectorGUI();
+    }
+}
 #endif

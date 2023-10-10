@@ -11,6 +11,8 @@ public class OWIGlobalSensation : UdonSharpBehaviour
         "\"arm_R\": 100", "\"lumbar_L\": 100", "\"lumbar_R\": 100", "\"abdominal_L\": 100", "\"abdominal_R\": 100"
     };
     private string builtMuscles = "";
+    [Header("Enable to Play Sensation on World Load")]
+    [SerializeField] private bool startSensationOnLoad = false;
 
     [Header("MicroSensation Settings")]
     [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
@@ -46,11 +48,11 @@ public class OWIGlobalSensation : UdonSharpBehaviour
     [SerializeField] private bool UseMuscleLumbarRight;
     [SerializeField] private bool UseMuscleAbdominalLeft;
     [SerializeField] private bool UseMuscleAbdominalRight;
-    private void OnEnable()
+    private void Start()
     {
         currentTimer = duration;
         delayTimer = duration;
-        if (!UseRandomMuscle && builtMuscles.Length ==0)
+        if (!UseRandomMuscle)
         {
             if (UseMusclePectoralLeft)
             {
@@ -113,6 +115,14 @@ public class OWIGlobalSensation : UdonSharpBehaviour
         rampUp = rup;
         rampDown = rdwm;
     }
+    public void StartSensation()
+    {
+        startSensationOnLoad = true;
+    }
+    public void StopSensation()
+    {
+        startSensationOnLoad = false;
+    }
     private string GetRandomMuscle()
     {
         int randomIndex = Random.Range(0, musclesArray.Length);
@@ -122,7 +132,7 @@ public class OWIGlobalSensation : UdonSharpBehaviour
     {
         currentTimer += Time.deltaTime;
 
-        if (currentTimer >= delayTimer)
+        if (currentTimer >= delayTimer & startSensationOnLoad)
         {
             Debug.Log($"VRC_OWO_WorldIntegration:[{{\"priority\": {sensationPriority},\"sensation\": \"{sensationName}\",\"frequency\": {frequency},\"duration\": {duration},\"intensity\": {intensityPercentage},\"rampup\":{rampUp},\"rampdown\":{rampDown},\"exitdelay\":0,\"Muscles\": {{{builtMuscles}}}}}]");
             currentTimer = 0f;
