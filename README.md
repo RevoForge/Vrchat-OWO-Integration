@@ -35,7 +35,8 @@ Basic Setup
 ![VRC OWO System World integration - Basic(7)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/242fcf57-39a5-421c-8774-dd5e2eb2ffba)
 ![VRC OWO System World integration - Basic(8)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/a1df1dc2-8c53-494f-ba23-28135e7d48e5)
 
-Advanced Sensation Information;
+Advanced Sensation Information:
+Single Sensation
 
     // Muscle Collider Names
     private readonly string pectoralL = "owo_suit_Pectoral_L";
@@ -102,3 +103,106 @@ Advanced Sensation Information;
             + end;
 
         Debug.Log(builtString);
+
+Multi-Sensation
+
+     // Sensation Settings
+    [Header("First Zone Triggered Event")]
+    [Header("Sensation Building Settings")]
+    [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
+    private int sensationPriority = 1;
+    [SerializeField, Tooltip("Name for the Sensation event.")]
+    private string sensationName = "Sword Stab";
+    [SerializeField, Tooltip("Frequency for the Sensation event.")]
+    [Range(1, 100)]
+    private int frequency = 60;
+    [SerializeField, Tooltip("Duration of the Sensation event.")]
+    [Range(0.1f, 20)]
+    private float duration = 0.3f;
+    [SerializeField, Tooltip("Intensity percentage for the Sensation event.")]
+    [Range(1, 100)]
+    private int intensityPercentage = 100;
+    [SerializeField, Tooltip("Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [Range(0, 2)]
+    private float rampUp = 0f;
+    [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [Range(0, 2)]
+    private float rampDown = 0f;
+    [SerializeField, Tooltip("Exit delay for the  Sensation event.")]
+    [Range(0, 20)]
+    private float exitDelay = 0f;
+
+    [Header("Secondary Zone Triggered Event")]
+    [SerializeField, Tooltip("Name for the Sensation event.")]
+    private string sensationName2 = "Sword Stab Through";
+    [SerializeField, Tooltip("Frequency for the Sensation event.")]
+    [Range(1, 100)]
+    private int frequency2 = 50;
+    [SerializeField, Tooltip("Duration of the  Sensation event.")]
+    [Range(0.1f, 20)]
+    private float duration2 = 0.3f;
+    [SerializeField, Tooltip("Intensity percentage for the  Sensation event.")]
+    [Range(1, 100)]
+    private int intensityPercentage2 = 80;
+    [SerializeField, Tooltip("Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [Range(0, 2)]
+    private float rampUp2 = 0f;
+    [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
+    [Range(0, 2)]
+    private float rampDown2 = 0f;
+    [SerializeField, Tooltip("Exit delay for the Sensation event.")]
+    [Range(0, 20)]
+    private float exitDelay2 = 0f;
+
+    // String Parts
+    private readonly string start = "VRC_OWO_WorldIntegration:[{ \"priority\":";
+    private readonly string sensationNameStart = "\"sensation\": \"";
+    private readonly string separator = "}},{";
+    private readonly string end = "}}]";
+    
+    private void ProcessTriggeredZones()
+    {
+        if (triggerCount == 1)
+        {
+            builtString = BuildSensationString(sensationName, frequency, duration, intensityPercentage, rampUp, rampDown, exitDelay, triggeredMuscles);
+            builtString2 = BuildSensationString(sensationName3, frequency3, duration3, intensityPercentage3, rampUp3, rampDown3, exitDelay3, triggeredMuscles);
+            multiString = BuildMultiSensationString(builtString, builtString2, builtString3);
+            Debug.Log(multiString);
+        }
+        if (triggerCount == 2)
+        {
+            builtString = BuildSensationString(sensationName, frequency, duration, intensityPercentage, rampUp, rampDown, exitDelay, triggeredMuscles);
+            builtString2 = BuildSensationString(sensationName2, frequency2, duration2, intensityPercentage2, rampUp2, rampDown2, exitDelay2, triggeredMuscles2);
+            builtString3 = BuildSensationString(sensationName3, frequency3, duration3, intensityPercentage3, rampUp3, rampDown3, exitDelay3, triggeredMuscles + ","+triggeredMuscles2);
+            multiString = BuildMultiSensationString(builtString, builtString2, builtString3);
+            Debug.Log(multiString);
+        }
+        triggerCount = 0;
+    }
+    
+     private string BuildSensationString(string sensation, int frequency, float durationVal, int intensityVal, float rampUp, float rampDown, float exitDelayVal, string muscles)
+    {
+        return sensation + "\","
+                + "\"frequency\": " + frequency + ","
+                + "\"duration\": " + durationVal + ","
+                + "\"intensity\": " + intensityVal + ","
+                + "\"rampup\":" + rampUp + ","
+                + "\"rampdown\":" + rampDown + ","
+                + "\"exitdelay\":" + exitDelayVal + ","
+                + "\"Muscles\": {" + muscles;
+    }
+    
+        private string BuildMultiSensationString(string sensationOne, string sensationTwo, string sensationThree)
+    {
+        if (triggerCount == 2)
+        {
+            return start + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + separator + sensationNameStart + sensationThree + end;
+        }
+        if (triggerCount == 1)
+        {
+            return start + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + end;
+        }
+        return "ERROR";
+    }
+
+    
