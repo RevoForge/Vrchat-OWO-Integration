@@ -35,3 +35,70 @@ Basic Setup
 ![VRC OWO System World integration - Basic(7)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/242fcf57-39a5-421c-8774-dd5e2eb2ffba)
 ![VRC OWO System World integration - Basic(8)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/a1df1dc2-8c53-494f-ba23-28135e7d48e5)
 
+Advanced Sensation Information;
+
+    // Muscle Collider Names
+    private readonly string pectoralL = "owo_suit_Pectoral_L";
+    private readonly string pectoralR = "owo_suit_Pectoral_R";
+    private readonly string dorsalL = "owo_suit_Dorsal_L";
+    private readonly string dorsalR = "owo_suit_Dorsal_R";
+    private readonly string armL = "owo_suit_Arm_L";
+    private readonly string armR = "owo_suit_Arm_R";
+    private readonly string lumbarL = "owo_suit_Lumbar_L";
+    private readonly string lumbarR = "owo_suit_Lumbar_R";
+    private readonly string abdominalL = "owo_suit_Abdominal_L";
+    private readonly string abdominalR = "owo_suit_Abdominal_R";
+    // Muscle String Names
+    private readonly string pectoralLm = "\"pectoral_L\": 100";
+    private readonly string pectoralRm = "\"pectoral_R\": 100";
+    private readonly string dorsalLm = "\"dorsal_L\": 100";
+    private readonly string dorsalRm = "\"dorsal_R\": 100";
+    private readonly string armLm = "\"arm_L\": 100";
+    private readonly string armRm = "\"arm_R\": 100";
+    private readonly string lumbarLm = "\"lumbar_L\": 100";
+    private readonly string lumbarRm = "\"lumbar_R\": 100";
+    private readonly string abdominalLm = "\"abdominal_L\": 100";
+    private readonly string abdominalRm = "\"abdominal_R\": 100";
+    private readonly string frontm = "\"frontMuscles\": 100";
+    private readonly string backm = "\"backMuscles\": 100";
+    private readonly string allm = "\"allMuscles\": 100";
+
+    // Sensation String Parts
+    private string start = "VRC_OWO_WorldIntegration:[{\"priority\": ";
+    private readonly string end = "}}]";
+
+    // Inspector MicroSensation Setting
+    [Header("MicroSensation Settings")]
+    [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
+    private int sensationPriority = 1;
+    [SerializeField, Tooltip("Name for the Sensation event.")]
+    private string sensationName = "Default Name";
+    [SerializeField, Tooltip("Frequency for the Sensation event.")]
+    [Range(1, 100)]
+    private int frequency = 100;
+    [SerializeField, Tooltip("Duration of the Sensation event.")]
+    [Range(0.1f, 20)]
+    private float duration = 0.1f;
+    [SerializeField, Tooltip("Intensity percentage for the Sensation event.")]
+    [Range(1, 100)]
+    private int intensityPercentage = 100;
+    [SerializeField, Tooltip("Ramp up time. Only 0.1 Increments affect the Vest.")]
+    [Range(0, 2)]
+    private float rampUp = 0f;
+    [SerializeField, Tooltip("Ramp down time. Only 0.1 Increments affect the Vest.")]
+    [Range(0, 2)]
+    private float rampDown = 0f;
+
+    // Building Sensation String
+            string builtString = start + sensationPriority + "," 
+            + "\"sensation\": " + sensationName + ","
+            + "\"frequency\": " + frequency + ","
+            + "\"duration\": " + duration + ","
+            + "\"intensity\": " + intensityPercentage + ","
+            + "\"rampup\": " + rampUp + ","
+            + "\"rampdown\": " + rampDown + ","
+            + "\"exitdelay\": " + 0 + ","
+            + "\"Muscles\": {" + triggeredMuscles
+            + end;
+
+        Debug.Log(builtString);
