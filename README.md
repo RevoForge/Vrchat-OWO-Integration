@@ -19,12 +19,13 @@
  Required For the Heavy Object Prefab  
 
 Basic Setup in PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/) 
-[VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12850820/VRC.OWO.System.World.integration.-.Basic.pdf)   
+[VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851576/VRC.OWO.System.World.integration.-.Basic.pdf)
 
-Advanced Setup in PDF (Advanced Setup is currently being written for advanced help go to the official OWO Discord And Check our Forum Post)
+Advanced Sensation Information PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)
+[VRC OWO haptics World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851581/VRC.OWO.haptics.World.integration.-.Advanced.pdf)
 
 Basic Setup
-![VRC OWO System World integration - Basic(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/7dcb79ef-75a9-4572-96f7-4b836f6134e5)
+![VRC OWO System World integration - Basic(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/fecf1405-5bae-4122-bc7e-50104a07fbba)
 ![VRC OWO System World integration - Basic(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/538d49ad-6e1f-44a6-b978-84f72aa4cb41)
 ![VRC OWO System World integration - Basic(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/ea507622-6e9a-4ac5-be03-6e39dd3d7fad)
 ![VRC OWO System World integration - Basic(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/3c1e9b7c-e7fc-41f5-b4a8-f22c45cc8304)
