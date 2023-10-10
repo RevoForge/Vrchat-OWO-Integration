@@ -18,10 +18,10 @@
  https://assetstore.unity.com/packages/3d/props/sports-equipment-dumbbell-216505  
  Required For the Heavy Object Prefab  
 
-Basic Setup in PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/) 
+Basic Setup in PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
 [VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851576/VRC.OWO.System.World.integration.-.Basic.pdf)
 
-Advanced Sensation Information PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)
+Advanced Sensation Information PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
 [VRC OWO haptics World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851581/VRC.OWO.haptics.World.integration.-.Advanced.pdf)
 
 Basic Setup
