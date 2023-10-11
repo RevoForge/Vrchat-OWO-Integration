@@ -5,7 +5,7 @@ using UnityEngine;
 public class OWIGlobalSensation : UdonSharpBehaviour
 {
     private float currentTimer;
-    private float delayTimer;
+    
     private readonly string[] musclesArray = {
         "\"pectoral_L\": 100", "\"pectoral_R\": 100", "\"dorsal_L\": 100", "\"dorsal_R\": 100", "\"arm_L\": 100",
         "\"arm_R\": 100", "\"lumbar_L\": 100", "\"lumbar_R\": 100", "\"abdominal_L\": 100", "\"abdominal_R\": 100"
@@ -35,6 +35,9 @@ public class OWIGlobalSensation : UdonSharpBehaviour
     [Range(0, 2)]
     private float rampDown = 0f;
 
+    [Header("Time Between replay")]
+    [SerializeField, Range(0.1f,20)]private float delayTimer = 0.1f;
+
     [Header("Muscle Choices")]
     [SerializeField, Tooltip("Ignores Other Muscle Choices sets a Random Muscle for each time the sensation Repeats.")] private bool UseRandomMuscle;
 
@@ -54,7 +57,7 @@ public class OWIGlobalSensation : UdonSharpBehaviour
     private void Start()
     {
         currentTimer = duration;
-        delayTimer = duration;
+       // delayTimer = duration;
         if (!UseRandomMuscle)
         {
             if (UseMusclePectoralLeft)
