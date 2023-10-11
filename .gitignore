@@ -81,5 +81,7 @@ crashlytics-build.properties
 /Assets/Floating Through Sky/
 /Assets/SerializedUdonPrograms/
 /Assets/UdonSharp/
+/Assets/O.W.I/Scripts/Experimental Scripts/
+/Assets/O.W.I/Prefabs/Experimental/AudioLinkIntegration/
 
 *.meta
