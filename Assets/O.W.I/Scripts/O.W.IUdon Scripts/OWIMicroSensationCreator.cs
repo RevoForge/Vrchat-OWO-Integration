@@ -15,6 +15,7 @@ public class OWIMicroSensationCreator : UdonSharpBehaviour
     private readonly string lumbarR = "owo_suit_Lumbar_R";
     private readonly string abdominalL = "owo_suit_Abdominal_L";
     private readonly string abdominalR = "owo_suit_Abdominal_R";
+
     // Muscle String Names
     private readonly string pectoralLm = "\"pectoral_L\": 100";
     private readonly string pectoralRm = "\"pectoral_R\": 100";
@@ -29,9 +30,11 @@ public class OWIMicroSensationCreator : UdonSharpBehaviour
     private readonly string frontm = "\"frontMuscles\": 100";
     private readonly string backm = "\"backMuscles\": 100";
     private readonly string allm = "\"allMuscles\": 100";
+
     // Sensation String Parts
-    private string start;
+    private string start = "VRC_OWO_WorldIntegration:[{\"priority\": ";
     private readonly string end = "}}]";
+
     // Inspector MicroSensation Setting
     [Header("MicroSensation Settings")]
     [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
@@ -214,13 +217,14 @@ public class OWIMicroSensationCreator : UdonSharpBehaviour
     // OWO MicroSensation StringBuilder
     private void ProcessTriggeredZones()
     {
-        string builtString = start + sensationName + "\","
+        string builtString = start + sensationPriority + "," 
+            + "\"sensation\": " + sensationName + ","
             + "\"frequency\": " + frequency + ","
             + "\"duration\": " + duration + ","
             + "\"intensity\": " + intensityPercentage + ","
-            + "\"rampup\":" + rampUp + ","
-            + "\"rampdown\":" + rampDown + ","
-            + "\"exitdelay\":" + 0 + ","
+            + "\"rampup\": " + rampUp + ","
+            + "\"rampdown\": " + rampDown + ","
+            + "\"exitdelay\": " + 0 + ","
             + "\"Muscles\": {" + triggeredMuscles
             + end;
 

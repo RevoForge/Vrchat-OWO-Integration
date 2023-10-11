@@ -46,9 +46,9 @@ MonoBehaviour:
   fileName: NewOWIUdonStaticScript
   sensations:
   - sensationName: First
-    frequency: 0
-    duration: 0
-    intensityPercentage: 0
+    frequency: 100
+    duration: 1
+    intensityPercentage: 1
     rampUp: 0
     rampDown: 0
     exitDelay: 0
@@ -64,9 +64,27 @@ MonoBehaviour:
       abdominalLmInt: 100
       abdominalRmInt: 100
   - sensationName: Second
-    frequency: 0
-    duration: 0
-    intensityPercentage: 0
+    frequency: 100
+    duration: 1
+    intensityPercentage: 1
+    rampUp: 0
+    rampDown: 0
+    exitDelay: 0
+    muscleOverrides:
+      pectoralLmInt: 100
+      pectoralRmInt: 100
+      dorsalLmInt: 100
+      dorsalRmInt: 100
+      armLmInt: 100
+      armRmInt: 100
+      lumbarLmInt: 100
+      lumbarRmInt: 100
+      abdominalLmInt: 100
+      abdominalRmInt: 100
+  - sensationName: Third
+    frequency: 100
+    duration: 1
+    intensityPercentage: 1
     rampUp: 0
     rampDown: 0
     exitDelay: 0

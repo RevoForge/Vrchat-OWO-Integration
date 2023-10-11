@@ -10,7 +10,7 @@ public class OWIGlobalSensation : UdonSharpBehaviour
         "\"pectoral_L\": 100", "\"pectoral_R\": 100", "\"dorsal_L\": 100", "\"dorsal_R\": 100", "\"arm_L\": 100",
         "\"arm_R\": 100", "\"lumbar_L\": 100", "\"lumbar_R\": 100", "\"abdominal_L\": 100", "\"abdominal_R\": 100"
     };
-    private string builtMuscles = "";
+    
     [Header("Enable to Play Sensation on World Load")]
     [SerializeField] private bool startSensationOnLoad = false;
 
@@ -37,6 +37,7 @@ public class OWIGlobalSensation : UdonSharpBehaviour
 
     [Header("Muscle Choices")]
     [SerializeField, Tooltip("Ignores Other Muscle Choices sets a Random Muscle for each time the sensation Repeats.")] private bool UseRandomMuscle;
+
     [Header("Ignored If Use Random Muscle is True")]
     [SerializeField] private bool UseMusclePectoralLeft;
     [SerializeField] private bool UseMusclePectoralRight;
@@ -48,6 +49,8 @@ public class OWIGlobalSensation : UdonSharpBehaviour
     [SerializeField] private bool UseMuscleLumbarRight;
     [SerializeField] private bool UseMuscleAbdominalLeft;
     [SerializeField] private bool UseMuscleAbdominalRight;
+    private string builtMuscles = "";
+
     private void Start()
     {
         currentTimer = duration;
