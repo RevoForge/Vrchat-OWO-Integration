@@ -24,7 +24,7 @@ Basic Setup in PDF (Also Avalible in the Release Package under Assets/O.W.I/Docu
 Advanced Sensation Information PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
 [VRC OWO haptics World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851581/VRC.OWO.haptics.World.integration.-.Advanced.pdf)
 
-Basic Setup
+Basic Setup:
 ![VRC OWO System World integration - Basic(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/fecf1405-5bae-4122-bc7e-50104a07fbba)
 ![VRC OWO System World integration - Basic(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/538d49ad-6e1f-44a6-b978-84f72aa4cb41)
 ![VRC OWO System World integration - Basic(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/ea507622-6e9a-4ac5-be03-6e39dd3d7fad)
@@ -36,7 +36,7 @@ Basic Setup
 ![VRC OWO System World integration - Basic(8)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/a1df1dc2-8c53-494f-ba23-28135e7d48e5)
 
 Advanced Sensation Information:
-Single Sensation
+
 
     // Muscle Collider Names
     private readonly string pectoralL = "owo_suit_Pectoral_L";
@@ -104,7 +104,7 @@ Single Sensation
 
         Debug.Log(builtString);
 
-Multi-Sensation
+
 
      // Sensation Settings
     [Header("First Zone Triggered Event")]
