@@ -1,208 +1,58 @@
-# Vrchat-OWO-Integration
- World Creator Files For VRC_OWO_WorldIntegrator Program Version PR1   
- 
+# Vrchat OWO World Integration
  Created by RevoForge & SonoVr   
  Documentation by BassBoostedDuck
+ <br>
+# OWI Client
+For Players   
+
+ OWI Client Files avalible in Releases   
+ [OWI Client Setup](#client-setup)
+<br>
+# OWI Unity Package
+For World Creators   
+
+ UnityPackage For VRC OWO WorldIntegrator also avalible in Releases   
+ [OWI Unity Basic Setup](#unity-basic-setup)   
  
  Project designed with VRCHAT 3.4.0 SDK  
  
- Free Assets from the Store are needed for prefabs  
- https://assetstore.unity.com/packages/3d/props/furniture/sci-fi-chair-116719  
+ **Some free assets from the Unity Store are needed for prefabs:**  
+ 
  Required For the Massage Chair Prefabs  
+ https://assetstore.unity.com/packages/3d/props/furniture/sci-fi-chair-116719  
+ 
+ Required for the PaintBall Gun Prefabs   
  https://assetstore.unity.com/packages/3d/props/weapons/weapon-master-scifi-weapon-1-lite-134423  
- Required for the PaintBall Gun Prefabs  
+   
+ Required for the Massage Effects Prefab   
  https://assetstore.unity.com/packages/vfx/particles/spells/particle-ribbon-42866  
  https://assetstore.unity.com/packages/2d/textures-materials/deep-space-skybox-pack-11056  
  https://assetstore.unity.com/packages/audio/music/floating-through-sky-ambient-meditation-relaxing-background-musi-225219  
- Required for the Massage Effects Prefab  
+   
+ Required For the Heavy Object Prefab   
  https://assetstore.unity.com/packages/3d/props/sports-equipment-dumbbell-216505  
- Required For the Heavy Object Prefab  
-
-Basic Setup in PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
-[VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851576/VRC.OWO.System.World.integration.-.Basic.pdf)
-
+   
+**Additional Documentaion:**   
 Advanced Sensation Information PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
-[VRC OWO haptics World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851581/VRC.OWO.haptics.World.integration.-.Advanced.pdf)
-
-Basic Setup:
-![VRC OWO System World integration - Basic(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/fecf1405-5bae-4122-bc7e-50104a07fbba)
-![VRC OWO System World integration - Basic(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/538d49ad-6e1f-44a6-b978-84f72aa4cb41)
-![VRC OWO System World integration - Basic(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/ea507622-6e9a-4ac5-be03-6e39dd3d7fad)
-![VRC OWO System World integration - Basic(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/3c1e9b7c-e7fc-41f5-b4a8-f22c45cc8304)
-![VRC OWO System World integration - Basic(4)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/b13e17b4-3e58-4c6d-8f95-f25fc691517c)
-![VRC OWO System World integration - Basic(5)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/3d5e2b31-df75-4b9d-848b-abe768a1d4b4)
-![VRC OWO System World integration - Basic(6)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/6fa9addb-e1d1-43c5-9e56-6b85b7198bb1)
-![VRC OWO System World integration - Basic(7)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/242fcf57-39a5-421c-8774-dd5e2eb2ffba)
-![VRC OWO System World integration - Basic(8)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/a1df1dc2-8c53-494f-ba23-28135e7d48e5)
-
-Advanced Sensation Information:
-
-
-    // Muscle Collider Names
-    private readonly string pectoralL = "owo_suit_Pectoral_L";
-    private readonly string pectoralR = "owo_suit_Pectoral_R";
-    private readonly string dorsalL = "owo_suit_Dorsal_L";
-    private readonly string dorsalR = "owo_suit_Dorsal_R";
-    private readonly string armL = "owo_suit_Arm_L";
-    private readonly string armR = "owo_suit_Arm_R";
-    private readonly string lumbarL = "owo_suit_Lumbar_L";
-    private readonly string lumbarR = "owo_suit_Lumbar_R";
-    private readonly string abdominalL = "owo_suit_Abdominal_L";
-    private readonly string abdominalR = "owo_suit_Abdominal_R";
-    // Muscle String Names
-    private readonly string pectoralLm = "\"pectoral_L\": 100";
-    private readonly string pectoralRm = "\"pectoral_R\": 100";
-    private readonly string dorsalLm = "\"dorsal_L\": 100";
-    private readonly string dorsalRm = "\"dorsal_R\": 100";
-    private readonly string armLm = "\"arm_L\": 100";
-    private readonly string armRm = "\"arm_R\": 100";
-    private readonly string lumbarLm = "\"lumbar_L\": 100";
-    private readonly string lumbarRm = "\"lumbar_R\": 100";
-    private readonly string abdominalLm = "\"abdominal_L\": 100";
-    private readonly string abdominalRm = "\"abdominal_R\": 100";
-    private readonly string frontm = "\"frontMuscles\": 100";
-    private readonly string backm = "\"backMuscles\": 100";
-    private readonly string allm = "\"allMuscles\": 100";
-
-    // Sensation String Parts
-    private string start = "VRC_OWO_WorldIntegration:[{\"priority\": ";
-    private readonly string end = "}}]";
-
-    // Inspector MicroSensation Setting
-    [Header("MicroSensation Settings")]
-    [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
-    private int sensationPriority = 1;
-    [SerializeField, Tooltip("Name for the Sensation event.")]
-    private string sensationName = "Default Name";
-    [SerializeField, Tooltip("Frequency for the Sensation event.")]
-    [Range(1, 100)]
-    private int frequency = 100;
-    [SerializeField, Tooltip("Duration of the Sensation event.")]
-    [Range(0.1f, 20)]
-    private float duration = 0.1f;
-    [SerializeField, Tooltip("Intensity percentage for the Sensation event.")]
-    [Range(1, 100)]
-    private int intensityPercentage = 100;
-    [SerializeField, Tooltip("Ramp up time. Only 0.1 Increments affect the Vest.")]
-    [Range(0, 2)]
-    private float rampUp = 0f;
-    [SerializeField, Tooltip("Ramp down time. Only 0.1 Increments affect the Vest.")]
-    [Range(0, 2)]
-    private float rampDown = 0f;
-
-    // Building Sensation String
-            string builtString = start + sensationPriority + "," 
-            + "\"sensation\": " + sensationName + ","
-            + "\"frequency\": " + frequency + ","
-            + "\"duration\": " + duration + ","
-            + "\"intensity\": " + intensityPercentage + ","
-            + "\"rampup\": " + rampUp + ","
-            + "\"rampdown\": " + rampDown + ","
-            + "\"exitdelay\": " + 0 + ","
-            + "\"Muscles\": {" + triggeredMuscles
-            + end;
-
-        Debug.Log(builtString);
-
-
-
-     // Sensation Settings
-    [Header("First Zone Triggered Event")]
-    [Header("Sensation Building Settings")]
-    [SerializeField, Tooltip("Value Decides if it interrupts the previous sensation")]
-    private int sensationPriority = 1;
-    [SerializeField, Tooltip("Name for the Sensation event.")]
-    private string sensationName = "Sword Stab";
-    [SerializeField, Tooltip("Frequency for the Sensation event.")]
-    [Range(1, 100)]
-    private int frequency = 60;
-    [SerializeField, Tooltip("Duration of the Sensation event.")]
-    [Range(0.1f, 20)]
-    private float duration = 0.3f;
-    [SerializeField, Tooltip("Intensity percentage for the Sensation event.")]
-    [Range(1, 100)]
-    private int intensityPercentage = 100;
-    [SerializeField, Tooltip("Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
-    [Range(0, 2)]
-    private float rampUp = 0f;
-    [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
-    [Range(0, 2)]
-    private float rampDown = 0f;
-    [SerializeField, Tooltip("Exit delay for the  Sensation event.")]
-    [Range(0, 20)]
-    private float exitDelay = 0f;
-
-    [Header("Secondary Zone Triggered Event")]
-    [SerializeField, Tooltip("Name for the Sensation event.")]
-    private string sensationName2 = "Sword Stab Through";
-    [SerializeField, Tooltip("Frequency for the Sensation event.")]
-    [Range(1, 100)]
-    private int frequency2 = 50;
-    [SerializeField, Tooltip("Duration of the  Sensation event.")]
-    [Range(0.1f, 20)]
-    private float duration2 = 0.3f;
-    [SerializeField, Tooltip("Intensity percentage for the  Sensation event.")]
-    [Range(1, 100)]
-    private int intensityPercentage2 = 80;
-    [SerializeField, Tooltip("Ramp up time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
-    [Range(0, 2)]
-    private float rampUp2 = 0f;
-    [SerializeField, Tooltip("Ramp down time Where 0.1 = 100ms Only 0.1 Increments affect the Vest.")]
-    [Range(0, 2)]
-    private float rampDown2 = 0f;
-    [SerializeField, Tooltip("Exit delay for the Sensation event.")]
-    [Range(0, 20)]
-    private float exitDelay2 = 0f;
-
-    // String Parts
-    private readonly string start = "VRC_OWO_WorldIntegration:[{ \"priority\":";
-    private readonly string sensationNameStart = "\"sensation\": \"";
-    private readonly string separator = "}},{";
-    private readonly string end = "}}]";
-    
-    private void ProcessTriggeredZones()
-    {
-        if (triggerCount == 1)
-        {
-            builtString = BuildSensationString(sensationName, frequency, duration, intensityPercentage, rampUp, rampDown, exitDelay, triggeredMuscles);
-            builtString2 = BuildSensationString(sensationName3, frequency3, duration3, intensityPercentage3, rampUp3, rampDown3, exitDelay3, triggeredMuscles);
-            multiString = BuildMultiSensationString(builtString, builtString2, builtString3);
-            Debug.Log(multiString);
-        }
-        if (triggerCount == 2)
-        {
-            builtString = BuildSensationString(sensationName, frequency, duration, intensityPercentage, rampUp, rampDown, exitDelay, triggeredMuscles);
-            builtString2 = BuildSensationString(sensationName2, frequency2, duration2, intensityPercentage2, rampUp2, rampDown2, exitDelay2, triggeredMuscles2);
-            builtString3 = BuildSensationString(sensationName3, frequency3, duration3, intensityPercentage3, rampUp3, rampDown3, exitDelay3, triggeredMuscles + ","+triggeredMuscles2);
-            multiString = BuildMultiSensationString(builtString, builtString2, builtString3);
-            Debug.Log(multiString);
-        }
-        triggerCount = 0;
-    }
-    
-     private string BuildSensationString(string sensation, int frequency, float durationVal, int intensityVal, float rampUp, float rampDown, float exitDelayVal, string muscles)
-    {
-        return sensation + "\","
-                + "\"frequency\": " + frequency + ","
-                + "\"duration\": " + durationVal + ","
-                + "\"intensity\": " + intensityVal + ","
-                + "\"rampup\":" + rampUp + ","
-                + "\"rampdown\":" + rampDown + ","
-                + "\"exitdelay\":" + exitDelayVal + ","
-                + "\"Muscles\": {" + muscles;
-    }
-    
-        private string BuildMultiSensationString(string sensationOne, string sensationTwo, string sensationThree)
-    {
-        if (triggerCount == 2)
-        {
-            return start + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + separator + sensationNameStart + sensationThree + end;
-        }
-        if (triggerCount == 1)
-        {
-            return start + sensationPriority + "," + sensationNameStart + sensationOne + separator + sensationNameStart + sensationTwo + end;
-        }
-        return "ERROR";
-    }
-
-    
+[VRC OWO haptics World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910022/VRC.OWO.haptics.World.integration.-.Advanced.pdf)
+<br>
+<br>
+# Client Setup
+Client Setup in PDF (Also Avalible in the Client Release Package)[OWI Client Setup.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910011/OWI.Client.Setup.pdf)
+![VRC OWO haptics World integration - EXE(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/209773e2-544f-4f41-be8e-32fb9502eade)
+![VRC OWO haptics World integration - EXE(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/42673036-60c3-4d40-a253-baea64ae8392)
+![VRC OWO haptics World integration - EXE(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/4d0c37e3-a040-46aa-a40f-87d3af8022c0)
+![VRC OWO haptics World integration - EXE(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/515f5485-1809-459d-b3ef-697a182740b0)
+<br>
+<br>
+# Unity Basic Setup
+Basic Setup in PDF (Also Avalible in the Unity Release Package under Assets/O.W.I/Documents/)   [VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12909998/VRC.OWO.System.World.integration.-.Basic.pdf)
+![VRC OWO haptics World integration (0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/b3e6eabd-3b27-4d8b-8648-b50b09601185)
+![VRC OWO haptics World integration (1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/fb4019ef-cfcb-46d2-be06-74785cfdd2b6)
+![VRC OWO haptics World integration (2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/7c34ed43-318f-4962-8c7d-054e64c0199e)
+![VRC OWO haptics World integration (3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/5dc6d5dc-2424-498e-861f-5701d1edf671)
+![VRC OWO haptics World integration (4)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/4951b13d-4e9a-4bd1-9beb-97d496c9a1bb)
+![VRC OWO haptics World integration (5)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/0153d71f-5d6f-43fd-8cb3-119d62a09076)
+![VRC OWO haptics World integration (6)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/8e751d96-3c34-4205-acf2-d616a4e9717f)
+![VRC OWO haptics World integration (7)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/0d7a446b-002f-4cae-9856-7a3eadb5f475)
+![VRC OWO haptics World integration (8)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/ce9a2266-8012-44f1-a3e1-ce8622ada126)
