@@ -1,28 +1,35 @@
-# Vrchat-OWO-Integration
- World Creator Files For VRC_OWO_WorldIntegrator Program Version PR1   
- 
+# Vrchat OWO World Integration
  Created by RevoForge & SonoVr   
  Documentation by BassBoostedDuck
- 
+ # OWI Client
+ For Players   
+ OWI Client Files avalible in Releases   
+ Link to Main Github 
+ https://github.com/RevoForge/Vrchat-OWO-Integration/tree/main#client-setup
+# OWI Unity Package
+ For World Creators   
+  UnityPackage For VRC OWO WorldIntegrator also avalible in Releases   
+ Link to Main Github
+ https://github.com/RevoForge/Vrchat-OWO-Integration/tree/main#unity-basic-setup  
  Project designed with VRCHAT 3.4.0 SDK  
- 
- Free Assets from the Store are needed for prefabs  
- https://assetstore.unity.com/packages/3d/props/furniture/sci-fi-chair-116719  
+ **Some free assets from the Unity Store are needed for prefabs:**  
  Required For the Massage Chair Prefabs  
+ https://assetstore.unity.com/packages/3d/props/furniture/sci-fi-chair-116719  
+ 
+ Required for the PaintBall Gun Prefabs   
  https://assetstore.unity.com/packages/3d/props/weapons/weapon-master-scifi-weapon-1-lite-134423  
- Required for the PaintBall Gun Prefabs  
+   
+ Required for the Massage Effects Prefab   
  https://assetstore.unity.com/packages/vfx/particles/spells/particle-ribbon-42866  
  https://assetstore.unity.com/packages/2d/textures-materials/deep-space-skybox-pack-11056  
  https://assetstore.unity.com/packages/audio/music/floating-through-sky-ambient-meditation-relaxing-background-musi-225219  
- Required for the Massage Effects Prefab  
+   
+ Required For the Heavy Object Prefab   
  https://assetstore.unity.com/packages/3d/props/sports-equipment-dumbbell-216505  
- Required For the Heavy Object Prefab  
-
-Basic Setup in PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
-[VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851576/VRC.OWO.System.World.integration.-.Basic.pdf)
-
+   
+Additional Documentaion:
 Advanced Sensation Information PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
-[VRC OWO haptics World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12851581/VRC.OWO.haptics.World.integration.-.Advanced.pdf)
+[VRC OWO System World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910141/VRC.OWO.System.World.integration.-.Advanced.pdf)
 
 
 Sensation Information Referenced in the Advanced Document:
