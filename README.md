@@ -34,25 +34,25 @@ For World Creators
    
 **Additional Documentaion:**   
 Advanced Sensation Information PDF (Also Avalible in the Release Package under Assets/O.W.I/Documents/)   
-[VRC OWO haptics World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910022/VRC.OWO.haptics.World.integration.-.Advanced.pdf)
+[VRC OWO System World integration - Advanced.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910141/VRC.OWO.System.World.integration.-.Advanced.pdf)
 <br>
 <br>
 # Client Setup
-Client Setup in PDF (Also Avalible in the Client Release Package)[OWI Client Setup.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910011/OWI.Client.Setup.pdf)
-![VRC OWO haptics World integration - EXE(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/209773e2-544f-4f41-be8e-32fb9502eade)
-![VRC OWO haptics World integration - EXE(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/42673036-60c3-4d40-a253-baea64ae8392)
-![VRC OWO haptics World integration - EXE(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/4d0c37e3-a040-46aa-a40f-87d3af8022c0)
-![VRC OWO haptics World integration - EXE(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/515f5485-1809-459d-b3ef-697a182740b0)
+Client Setup in PDF (Also Avalible in the Client Release Package) [OWI Client Setup.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910011/OWI.Client.Setup.pdf)
+![OWI Client Setup(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/4fc2c935-9e9c-467b-ab60-169b8294987e)
+![OWI Client Setup(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/dd60b9f4-dc07-4570-afef-cb9814fa74df)
+![OWI Client Setup(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/6e19d3db-345d-4df3-87ae-8114a675be12)
+![OWI Client Setup(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/7ea7a8ab-96e2-4116-9136-f4fd90db6e53)
 <br>
 <br>
 # Unity Basic Setup
-Basic Setup in PDF (Also Avalible in the Unity Release Package under Assets/O.W.I/Documents/)   [VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12909998/VRC.OWO.System.World.integration.-.Basic.pdf)
-![VRC OWO haptics World integration (0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/b3e6eabd-3b27-4d8b-8648-b50b09601185)
-![VRC OWO haptics World integration (1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/fb4019ef-cfcb-46d2-be06-74785cfdd2b6)
-![VRC OWO haptics World integration (2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/7c34ed43-318f-4962-8c7d-054e64c0199e)
-![VRC OWO haptics World integration (3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/5dc6d5dc-2424-498e-861f-5701d1edf671)
-![VRC OWO haptics World integration (4)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/4951b13d-4e9a-4bd1-9beb-97d496c9a1bb)
-![VRC OWO haptics World integration (5)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/0153d71f-5d6f-43fd-8cb3-119d62a09076)
-![VRC OWO haptics World integration (6)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/8e751d96-3c34-4205-acf2-d616a4e9717f)
-![VRC OWO haptics World integration (7)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/0d7a446b-002f-4cae-9856-7a3eadb5f475)
-![VRC OWO haptics World integration (8)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/ce9a2266-8012-44f1-a3e1-ce8622ada126)
+Basic Setup in PDF (Also Avalible in the Unity Release Package under Assets/O.W.I/Documents/)   [VRC OWO System World integration - Basic.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910144/VRC.OWO.System.World.integration.-.Basic.pdf)
+![VRC OWO System World integration - Basic(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/f93e670a-8a43-4b06-8275-c6bd932e7dfa)
+![VRC OWO System World integration - Basic(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/f353290b-8bc3-463e-842c-43cf93e29dc0)
+![VRC OWO System World integration - Basic(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/b5c8fb2f-a81f-44f4-b807-3b44ff22c8a3)
+![VRC OWO System World integration - Basic(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/ca930342-7a34-4f2a-ab9e-12b2870d8fc0)
+![VRC OWO System World integration - Basic(4)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/9c4d6ccf-3d0d-4756-8ecd-760c39956924)
+![VRC OWO System World integration - Basic(5)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/3496b7f6-4255-47db-b7f4-66b08023106f)
+![VRC OWO System World integration - Basic(6)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/c1892c78-a9c0-41a8-994e-c851ddfb8c4a)
+![VRC OWO System World integration - Basic(7)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/27be884e-0957-4315-a32d-c42e1475b0c8)
+![VRC OWO System World integration - Basic(8)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/f11c091a-fe3a-4366-a0a6-4917f3431094)
