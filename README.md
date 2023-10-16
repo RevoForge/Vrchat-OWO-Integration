@@ -38,11 +38,11 @@ Advanced Sensation Information PDF (Also Avalible in the Release Package under A
 <br>
 <br>
 # Client Setup
-Client Setup in PDF (Also Avalible in the Client Release Package) [OWI Client Setup.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12910011/OWI.Client.Setup.pdf)
-![OWI Client Setup(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/4fc2c935-9e9c-467b-ab60-169b8294987e)
-![OWI Client Setup(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/dd60b9f4-dc07-4570-afef-cb9814fa74df)
-![OWI Client Setup(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/6e19d3db-345d-4df3-87ae-8114a675be12)
-![OWI Client Setup(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/7ea7a8ab-96e2-4116-9136-f4fd90db6e53)
+Client Setup in PDF (Also Avalible in the Client Release Package) [OWI Client Setup.pdf](https://github.com/RevoForge/Vrchat-OWO-Integration/files/12921623/OWI.Client.Setup.pdf)
+![OWI Client Setup(0)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/d228b3f7-7480-4380-a176-2f18ea2cf69b)
+![OWI Client Setup(1)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/4e7f521d-5841-4284-af44-84421c0a5712)
+![OWI Client Setup(2)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/e757c12c-5872-43e3-ad2d-9ca9b1d1caa5)
+![OWI Client Setup(3)](https://github.com/RevoForge/Vrchat-OWO-Integration/assets/144636833/0acca922-2726-4bba-b669-1f16725a170f)
 <br>
 <br>
 # Unity Basic Setup
