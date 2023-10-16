@@ -5,13 +5,13 @@
 # OWI Client
 For Players   
 
- [OWI Client Files](https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/ExternalEXE)   
+ [OWI Client Files](https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/OWI_Client)   
  [OWI Client Setup](#client-setup)
 <br>
 # OWI Unity Package
 For World Creators   
 
- [OWI Unity Package Files](https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/WorldFiles)   
+ [OWI Unity Package Files](https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/OWI_World)   
  [OWI Unity Basic Setup](#unity-basic-setup)   
  
  Project designed with VRCHAT 3.4.0 SDK  
