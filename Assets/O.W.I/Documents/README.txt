@@ -3,12 +3,12 @@
  Documentation by BassBoostedDuck
  # OWI Client
  For Players   
- OWI Client Files avalible in Releases   
+ OWI Client Files https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/OWI_Client
  Link to Main Github 
  https://github.com/RevoForge/Vrchat-OWO-Integration/tree/main#client-setup
 # OWI Unity Package
  For World Creators   
-  UnityPackage For VRC OWO WorldIntegrator also avalible in Releases   
+  UnityPackage For VRC OWO WorldIntegrator https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/OWI_World  
  Link to Main Github
  https://github.com/RevoForge/Vrchat-OWO-Integration/tree/main#unity-basic-setup  
  Project designed with VRCHAT 3.4.0 SDK  

@@ -1,9 +1,10 @@
 ﻿#if UNITY_EDITOR
-using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
+
+
 
 [CustomEditor(typeof(OWIUdonSharpDynamicScriptCreator))]
 public class OWIUdonSharpDynamicCreatorEditor : Editor
