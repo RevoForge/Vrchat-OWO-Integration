@@ -8,6 +8,11 @@ For Players
  [OWI Client Files](https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/OWI_Client)   
  [OWI Client Setup](#client-setup)
 <br>
+# OWI Test Worlds
+After you have the Client you can check out these worlds that we have setup. (The Demo Testing World is also avalible in the Unity Package)
+[Demo Testing World](https://vrchat.com/home/world/wrld_baa2a496-c4f1-4880-b8a0-c3fee4982c8f)   
+[Immersive Testing World](https://vrchat.com/home/world/wrld_73c6225c-16ec-4eba-8d88-1d1fcf03bc76)
+<br>
 # OWI Unity Package
 For World Creators   
 
