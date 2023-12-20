@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class NewOWIUdonStaticScript : UdonSharpBehaviour
 {
-[Header("Events")]
     [Header("Events")]
     // Muscle Collider Names
     private const string pectoralL = "owo_suit_Pectoral_L";
