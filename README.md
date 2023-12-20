@@ -19,7 +19,7 @@ For World Creators
  [OWI Unity Package Files](https://github.com/RevoForge/Vrchat-OWO-Integration/releases/tag/OWI_World)   
  [OWI Unity Basic Setup](#unity-basic-setup)   
  
- Project designed with VRCHAT 3.4.0 SDK  
+ Project designed with VRCHAT 3.4.0 SDK (updated for VRCHAT 3.5.0 SDK)  
  
  **Some free assets from the Unity Store are needed for prefabs:**  
  
