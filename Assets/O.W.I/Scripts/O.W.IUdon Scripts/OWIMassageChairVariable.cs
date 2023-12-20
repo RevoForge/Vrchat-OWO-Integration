@@ -218,6 +218,7 @@ public class OWIMassageChairVariable : UdonSharpBehaviour
 
     private string BuildSensationString(string sensation, int frequency, float durationVal, int intensityVal, float rampUp, float rampDown, float exitDelayVal, string muscles)
     {
+        char[] charsToTrim = { ',' };
         if (string.IsNullOrEmpty(muscles))
         {
             return "";
@@ -229,7 +230,7 @@ public class OWIMassageChairVariable : UdonSharpBehaviour
                 + "\"rampup\":" + rampUp + ","
                 + "\"rampdown\":" + rampDown + ","
                 + "\"exitdelay\":" + exitDelayVal + ","
-                + "\"Muscles\": {" + muscles.TrimEnd(',');
+                + "\"Muscles\": {" + muscles.TrimEnd(charsToTrim);
     }
 
     private string BuildMultiSensationString(string sensationOne, string sensationTwo, string sensationThree, string sensationFour)

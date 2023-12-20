@@ -303,6 +303,7 @@ public class OWIBullet : UdonSharpBehaviour
 
     private string BuildSensationString(string sensation, int frequency, float durationVal, int intensityVal, float rampUp, float rampDown, float exitDelayVal, string muscles)
     {
+        char[] charsToTrim = { ',' };
         return sensation + "\","
                 + "\"frequency\": " + frequency + ","
                 + "\"duration\": " + durationVal + ","
@@ -310,7 +311,7 @@ public class OWIBullet : UdonSharpBehaviour
                 + "\"rampup\":" + rampUp + ","
                 + "\"rampdown\":" + rampDown + ","
                 + "\"exitdelay\":" + exitDelayVal + ","
-                + "\"Muscles\": {" + muscles.TrimEnd(',');
+                + "\"Muscles\": {" + muscles.TrimEnd(charsToTrim);
     }
     private string BuildMultiSensationString(string sensationOne, string sensationTwo, string sensationThree)
     {

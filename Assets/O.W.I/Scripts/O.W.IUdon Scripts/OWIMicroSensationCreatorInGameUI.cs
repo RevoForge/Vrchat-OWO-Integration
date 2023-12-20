@@ -253,6 +253,7 @@ public class OWIMicroSensationCreatorInGameUI : UdonSharpBehaviour
     // OWO MicroSensation StringBuilder
     private void ProcessTriggeredZones()
     {
+        char[] charsToTrim = { ',' };
         string builtString = start + sensationName + "\","
             + "\"frequency\": " + frequency + ","
             + "\"duration\": " + duration + ","
@@ -260,7 +261,7 @@ public class OWIMicroSensationCreatorInGameUI : UdonSharpBehaviour
             + "\"rampup\":" + rampUp + ","
             + "\"rampdown\":" + rampDown + ","
             + "\"exitdelay\":" + 0 + ","
-            + "\"Muscles\": {" + triggeredMuscles.TrimEnd(',')
+            + "\"Muscles\": {" + triggeredMuscles.TrimEnd(charsToTrim)
             + end;
 
         Debug.Log(builtString);

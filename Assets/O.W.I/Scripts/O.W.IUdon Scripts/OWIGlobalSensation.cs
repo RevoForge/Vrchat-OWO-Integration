@@ -60,6 +60,7 @@ public class OWIGlobalSensation : UdonSharpBehaviour
        // delayTimer = duration;
         if (!UseRandomMuscle)
         {
+            char[] charsToTrim = { ',' };
             if (UseMusclePectoralLeft)
             {
                 builtMuscles += musclesArray[0] + ",";
@@ -100,7 +101,7 @@ public class OWIGlobalSensation : UdonSharpBehaviour
             {
                 builtMuscles += musclesArray[9];
             }
-            builtMuscles = builtMuscles.TrimEnd(',');
+            builtMuscles = builtMuscles.TrimEnd(charsToTrim);
         }
     }
     private void Update()

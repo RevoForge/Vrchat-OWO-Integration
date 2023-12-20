@@ -160,7 +160,7 @@ public class OWIPaintBallGun : UdonSharpBehaviour
         if ((isNetworked && currentPaintBallIndex < paintBallsNetworked.Length) ||
             (!isNetworked && currentPaintBallIndex < paintBalls.Length))
         {
-            Debug.Log($"VRC_OWO_WorldIntegration: [{{ \"priority\": {sensationPriority},\"sensation\": \"Recoil\",\"frequency\": 11,\"duration\": 3,\"intensity\": {recoilIntensity},\"rampup\":0,\"rampdown\":1.5,\"exitdelay\":0,\"Muscles\": {{ \"arm_{(isRightHandHolding ? "R" : "L")}\": 100,\"pectoral_{(isRightHandHolding ? "R" : "L")}\": 100}}}}]");
+            Debug.Log($"VRC_OWO_WorldIntegration: [{{ \"priority\": {sensationPriority},\"sensation\": \"Recoil\",\"frequency\": 1,\"duration\": 1,\"intensity\": {recoilIntensity},\"rampup\":0,\"rampdown\":1.5,\"exitdelay\":0,\"Muscles\": {{ \"arm_{(isRightHandHolding ? "R" : "L")}\": 100,\"pectoral_{(isRightHandHolding ? "R" : "L")}\": 100}}}}]");
         }
 
     }

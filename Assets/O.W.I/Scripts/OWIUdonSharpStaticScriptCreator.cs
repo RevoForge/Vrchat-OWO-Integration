@@ -346,6 +346,7 @@ public class OWIUdonSharpStaticScriptCreator : MonoBehaviour
     private string GenerateTriggeredMuscleLogic()
     {
         StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.AppendLine("char[] charsToTrim = { ',' };");
         stringBuilder.AppendLine("string triggeredmuscles = \"\";");
         stringBuilder.AppendLine("if (triggerMusclesString[0].Length > 0) {triggeredmuscles += triggerMusclesString[0] + \",\";triggeredMuscleInt = 1;}");
         stringBuilder.AppendLine("if (triggerMusclesString[1].Length > 0) {triggeredmuscles += triggerMusclesString[1] + \",\";triggeredMuscleInt = 2;}");
@@ -358,7 +359,7 @@ public class OWIUdonSharpStaticScriptCreator : MonoBehaviour
         stringBuilder.AppendLine("if (triggerMusclesString[8].Length > 0) {triggeredmuscles += triggerMusclesString[8] + \",\";triggeredMuscleInt = 9;}");
         stringBuilder.AppendLine("if (triggerMusclesString[9].Length > 0) {triggeredmuscles += triggerMusclesString[9];triggeredMuscleInt = 10;}");
         // Remove the trailing comma if it exists
-        stringBuilder.AppendLine("triggeredmuscles.TrimEnd(',');");
+        stringBuilder.AppendLine("triggeredmuscles.TrimEnd(charsToTrim);");
         stringBuilder.Append("return triggeredmuscles;");
 
         return stringBuilder.ToString();
@@ -366,8 +367,8 @@ public class OWIUdonSharpStaticScriptCreator : MonoBehaviour
     private string GenerateBuildStringLogic()
     {
         StringBuilder stringBuilder = new StringBuilder();
-
-        stringBuilder.AppendLine("return sensation + \"\\\",\"\r\n+ \"\\\"frequency\\\": \" + frequency + \",\"\r\n+ \"\\\"duration\\\": \" + durationVal + \",\"\r\n+ \"\\\"intensity\\\": \" + intensityVal + \",\"\r\n+ \"\\\"rampup\\\":\" + rampUp + \",\"\r\n+ \"\\\"rampdown\\\":\" + rampDown + \",\"\r\n+ \"\\\"exitdelay\\\":\" + exitDelayVal + \",\"\r\n+ \"\\\"Muscles\\\": {\" + muscles.TrimEnd(',');");
+        stringBuilder.AppendLine("char[] charsToTrim = { ',' };");
+        stringBuilder.AppendLine("return sensation + \"\\\",\"\r\n+ \"\\\"frequency\\\": \" + frequency + \",\"\r\n+ \"\\\"duration\\\": \" + durationVal + \",\"\r\n+ \"\\\"intensity\\\": \" + intensityVal + \",\"\r\n+ \"\\\"rampup\\\":\" + rampUp + \",\"\r\n+ \"\\\"rampdown\\\":\" + rampDown + \",\"\r\n+ \"\\\"exitdelay\\\":\" + exitDelayVal + \",\"\r\n+ \"\\\"Muscles\\\": {\" + muscles.TrimEnd(charsToTrim);");
 
 
         return stringBuilder.ToString();

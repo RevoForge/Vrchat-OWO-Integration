@@ -336,8 +336,8 @@ public class OWIUdonSharpDynamicScriptCreator : MonoBehaviour
     private string GenerateBuildStringLogic()
     {
         StringBuilder stringBuilder = new StringBuilder();
-
-        stringBuilder.AppendLine("return sensation + \"\\\",\"\r\n+ \"\\\"frequency\\\": \" + frequency + \",\"\r\n+ \"\\\"duration\\\": \" + durationVal + \",\"\r\n+ \"\\\"intensity\\\": \" + intensityVal + \",\"\r\n+ \"\\\"rampup\\\":\" + rampUp + \",\"\r\n+ \"\\\"rampdown\\\":\" + rampDown + \",\"\r\n+ \"\\\"exitdelay\\\":\" + exitDelayVal + \",\"\r\n+ \"\\\"Muscles\\\": {\" + muscles.TrimEnd(',');");
+        stringBuilder.AppendLine("char[] charsToTrim = { ',' };");
+        stringBuilder.AppendLine("return sensation + \"\\\",\"\r\n+ \"\\\"frequency\\\": \" + frequency + \",\"\r\n+ \"\\\"duration\\\": \" + durationVal + \",\"\r\n+ \"\\\"intensity\\\": \" + intensityVal + \",\"\r\n+ \"\\\"rampup\\\":\" + rampUp + \",\"\r\n+ \"\\\"rampdown\\\":\" + rampDown + \",\"\r\n+ \"\\\"exitdelay\\\":\" + exitDelayVal + \",\"\r\n+ \"\\\"Muscles\\\": {\" + muscles.TrimEnd(charsToTrim);");
 
 
         return stringBuilder.ToString();
